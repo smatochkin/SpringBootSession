@@ -1,0 +1,12 @@
+---
+applications:
+- name: spring-boot-session-redis
+  memory: 512M
+  instances: 1
+  path: build/libs/SpringBootSession-0.0.1-SNAPSHOT.jar
+  services:
+    - redis-session
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+    DEBUG: "true"
+    debug: "true"
